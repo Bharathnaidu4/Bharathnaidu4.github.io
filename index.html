@@ -4,98 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bharath Ramanjaneyam | Portfolio</title>
-
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b0f14;
+      background: #0b0f1a;
       color: white;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background: linear-gradient(135deg, #111827, #0b0f14);
-      padding: 70px 20px;
       text-align: center;
     }
 
+    header {
+      padding: 60px 20px;
+    }
+
     header h1 {
-      font-size: 48px;
-      margin: 0;
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
     header p {
-      margin-top: 10px;
-      color: #b8c2cc;
       font-size: 18px;
+      color: #b0b0b0;
     }
 
-    .btns {
-      margin-top: 25px;
-    }
-
-    .btns a {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 18px;
-      background: #1f2937;
-      border: 1px solid #374151;
-      color: white;
+    nav a {
+      margin: 10px;
       text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
+      color: white;
+      border: 1px solid white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-size: 14px;
     }
 
-    .btns a:hover {
-      border-color: #00d4ff;
+    nav a:hover {
+      background: white;
+      color: black;
     }
 
     section {
       max-width: 900px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 40px 20px;
+      text-align: left;
     }
 
     h2 {
-      font-size: 30px;
-      border-left: 5px solid #00d4ff;
-      padding-left: 10px;
-      margin-bottom: 20px;
+      border-bottom: 2px solid #444;
+      padding-bottom: 10px;
     }
 
     .card {
-      background: #111827;
+      background: #141a2b;
       padding: 20px;
-      border-radius: 15px;
-      border: 1px solid #1f2937;
-      margin-bottom: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
     }
 
     .card h3 {
-      margin-top: 0;
-      color: #00d4ff;
+      margin: 0;
+      color: #00c2ff;
     }
 
-    .card a {
-      color: #00d4ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .card a:hover {
-      text-decoration: underline;
-    }
-
-    ul {
-      padding-left: 18px;
+    .card p {
+      color: #d0d0d0;
+      font-size: 15px;
     }
 
     footer {
-      text-align: center;
       padding: 20px;
-      color: #b8c2cc;
-      border-top: 1px solid #1f2937;
+      background: #05070f;
+      font-size: 14px;
+      color: #aaa;
     }
   </style>
 </head>
@@ -104,22 +84,22 @@
 
   <header>
     <h1>Bharath Ramanjaneyam</h1>
-    <p>Data Science | Machine Learning | AI Agents | Decision Support Systems</p>
+    <p>Data Science | AI | Machine Learning | Decision Support Systems</p>
 
-    <div class="btns">
+    <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
-    </div>
+    </nav>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
     <div class="card">
       <p>
-        Hi, I’m Bharath Ramanjaneyam. I am a Data Science student passionate about Machine Learning and AI-based Decision Support Systems.
-        I enjoy building real-world projects and creating meaningful solutions using data.
+        Hi, I’m Bharath Ramanjaneyam. I am a Data Science student passionate about Machine Learning, AI Agents,
+        and Decision Support Systems. I enjoy building real-world projects and improving my analytical and problem-solving skills.
       </p>
     </div>
   </section>
@@ -129,17 +109,22 @@
 
     <div class="card">
       <h3>Fake Job Posting Detection (Machine Learning)</h3>
-      <p><b>Goal:</b> Detect whether a job posting is Real or Fake.</p>
-      <p><b>Tech Used:</b> Python, TF-IDF, Logistic Regression, Naive Bayes, Decision Tree, Random Forest</p>
-      <p><b>Best Model:</b> Random Forest (~98% Accuracy)</p>
-      <p><b>Colab Notebook:</b> <a href="#" target="_blank">Add Colab Link Here</a></p>
+      <p>
+        Built a machine learning model to detect fake job postings using text preprocessing and classification techniques.
+        Used TF-IDF, Logistic Regression, Naive Bayes, and Random Forest.
+      </p>
+      <p><b>Tools:</b> Python, Pandas, Scikit-learn</p>
+      <p><a style="color:#00c2ff;" href="#">GitHub Repo Link Here</a></p>
     </div>
 
     <div class="card">
       <h3>AI Study Planner Agent (AI Agents / DSS)</h3>
-      <p><b>Goal:</b> Help students prioritize assignments and generate daily study plans.</p>
-      <p><b>Tool Used:</b> Poe AI Bot</p>
-      <p><b>Carousel PDF:</b> <a href="#" target="_blank">Add PDF Link Here</a></p>
+      <p>
+        Created an AI-based study planner assistant that helps prioritize assignments and generates a daily study plan.
+        Implemented using AI workflows and chatbot structure.
+      </p>
+      <p><b>Tools:</b> Flowise / Poe / AI Tools</p>
+      <p><a style="color:#00c2ff;" href="#">Carousel PDF & Workflow Link Here</a></p>
     </div>
 
   </section>
@@ -149,14 +134,11 @@
 
     <div class="card">
       <h3>NoBroker – Sales Executive (Packers & Movers)</h3>
-      <ul>
-        <li>Handled customer calls and guided customers to select the best relocation services.</li>
-        <li>Worked on negotiation, pricing strategy, and booking conversion.</li>
-        <li>Improved communication, decision-making, and customer handling skills.</li>
-      </ul>
       <p>
-        This experience helped me understand real-world business decision making and customer needs, which supports my interest in Decision Support Systems.
+        Worked as a Sales Executive for NoBroker’s Packers and Movers service.
+        Handled customer queries, converted leads into bookings, negotiated pricing, and ensured smooth service delivery.
       </p>
+      <p><b>Key Skills:</b> Sales, Customer Handling, Negotiation, CRM Tools</p>
     </div>
 
   </section>
@@ -165,14 +147,14 @@
     <h2>Contact</h2>
 
     <div class="card">
-      <p><b>Email:</b> your-email@gmail.com</p>
-      <p><b>LinkedIn:</b> <a href="#" target="_blank">Add LinkedIn Link Here</a></p>
-      <p><b>GitHub:</b> <a href="#" target="_blank">Add GitHub Link Here</a></p>
+      <p><b>Email:</b> your-bharathramanjaneyam@gmail.com</p>
+      <p><b>LinkedIn:</b> <a style="color:#00c2ff;" href="#">Add LinkedIn Link Here</a></p>
+      <p><b>GitHub:</b> <a style="color:#00c2ff;" href="#">Add GitHub Link Here</a></p>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Bharath Ramanjaneyam | Portfolio Website</p>
+    © 2026 Bharath Ramanjaneyam | Portfolio Website
   </footer>
 
 </body>
