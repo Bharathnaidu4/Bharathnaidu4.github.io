@@ -5,77 +5,207 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bharath Ramanjaneyam | Portfolio</title>
   <style>
-    body {
-      margin: 0;
+    :root{
+      --bg:#0b0f1a;
+      --card:#141a2b;
+      --muted:#b9c0d0;
+      --text:#ffffff;
+      --accent:#00c2ff;
+      --line:#2a3552;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background: #0b0f1a;
-      color: white;
-      text-align: center;
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(0,194,255,.18), transparent 60%),
+                  radial-gradient(900px 500px at 10% 10%, rgba(120,90,255,.16), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      text-align:center;
     }
-
-    header {
-      padding: 60px 20px;
+    header{
+      padding: 60px 20px 30px;
+      max-width: 1050px;
+      margin: 0 auto;
     }
-
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+    .hero{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
     }
-
-    header p {
-      font-size: 18px;
-      color: #b0b0b0;
+    .avatar{
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      border:2px solid rgba(0,194,255,.6);
+      box-shadow: 0 0 30px rgba(0,194,255,.18);
+      background: rgba(255,255,255,.06);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      flex:0 0 auto;
     }
-
-    nav a {
-      margin: 10px;
-      text-decoration: none;
-      color: white;
-      border: 1px solid white;
-      padding: 8px 15px;
-      border-radius: 6px;
-      font-size: 14px;
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
-
-    nav a:hover {
-      background: white;
-      color: black;
+    header h1{
+      font-size: 42px;
+      margin: 0 0 8px;
+      letter-spacing:.2px;
     }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      text-align: left;
-    }
-
-    h2 {
-      border-bottom: 2px solid #444;
-      padding-bottom: 10px;
-    }
-
-    .card {
-      background: #141a2b;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    .card h3 {
+    header p{
       margin: 0;
-      color: #00c2ff;
+      font-size: 16px;
+      color: var(--muted);
+      line-height:1.6;
     }
-
-    .card p {
-      color: #d0d0d0;
-      font-size: 15px;
+    .tagline{
+      margin-top:10px;
+      color:#d9def0;
+      font-size:14px;
+      opacity:.9;
     }
-
-    footer {
-      padding: 20px;
-      background: #05070f;
+    nav{
+      margin-top: 18px;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.35);
+      padding: 8px 14px;
+      border-radius:10px;
       font-size: 14px;
-      color: #aaa;
+      transition: .2s ease;
+      background: rgba(255,255,255,.04);
+    }
+    nav a:hover{
+      background: var(--accent);
+      border-color: var(--accent);
+      color:#051019;
+      transform: translateY(-1px);
+    }
+    .cta{
+      margin-top: 16px;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      font-size:14px;
+      border:1px solid rgba(0,194,255,.55);
+      color: var(--accent);
+      background: rgba(0,194,255,.08);
+      transition:.2s ease;
+    }
+    .btn:hover{
+      background: var(--accent);
+      color:#051019;
+      transform: translateY(-1px);
+    }
+    .btn.secondary{
+      border-color: rgba(255,255,255,.30);
+      color: #fff;
+      background: rgba(255,255,255,.05);
+    }
+    section{
+      max-width: 1050px;
+      margin: auto;
+      padding: 26px 20px;
+      text-align:left;
+    }
+    h2{
+      margin:0 0 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+      font-size: 20px;
+      letter-spacing:.2px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(20,26,43,.95), rgba(20,26,43,.75));
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+    }
+    .card h3{
+      margin:0 0 10px;
+      color: var(--accent);
+      font-size: 16px;
+    }
+    .card p{
+      margin: 8px 0;
+      color: #d6dbeb;
+      font-size: 14px;
+      line-height:1.6;
+    }
+    .pill-wrap{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .pill{
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:#eaf7ff;
+      border:1px solid rgba(0,194,255,.35);
+      background: rgba(0,194,255,.10);
+    }
+    .links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .links a{
+      text-decoration:none;
+      color: var(--accent);
+      border:1px solid rgba(0,194,255,.35);
+      background: rgba(0,194,255,.07);
+      padding:8px 12px;
+      border-radius:12px;
+      font-size:13px;
+      transition:.2s ease;
+    }
+    .links a:hover{
+      background: var(--accent);
+      color:#051019;
+      transform: translateY(-1px);
+    }
+    .col-6{grid-column: span 6;}
+    .col-12{grid-column: span 12;}
+    @media (max-width: 900px){
+      .col-6{grid-column: span 12;}
+      header h1{font-size:34px;}
+    }
+    footer{
+      padding: 18px;
+      margin-top: 10px;
+      background: rgba(5,7,15,.7);
+      font-size: 13px;
+      color: #aab2c8;
+      border-top: 1px solid rgba(255,255,255,.06);
     }
   </style>
 </head>
@@ -83,11 +213,28 @@
 <body>
 
   <header>
-    <h1>Bharath Ramanjaneyam</h1>
-    <p>Data Science | AI | Machine Learning | Decision Support Systems</p>
+    <div class="hero">
+      <div class="avatar">
+        <!-- Optional: upload an image file to repo (ex: bot.png) and replace below -->
+        <!-- <img src="bot.png" alt="Bharath"> -->
+        <span style="font-size:12px;color:rgba(255,255,255,.75);">Add Photo</span>
+      </div>
+
+      <div>
+        <h1>Bharath Ramanjaneyam</h1>
+        <p>Data Science • AI • Machine Learning • Decision Support Systems</p>
+        <div class="tagline">Projects from DSS: ML classification + AI Agent workflow.</div>
+
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </div>
 
     <nav>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
@@ -98,59 +245,92 @@
     <h2>About Me</h2>
     <div class="card">
       <p>
-        Hi, I’m Bharath Ramanjaneyam. I am a Data Science student passionate about Machine Learning, AI Agents,
-        and Decision Support Systems. I enjoy building real-world projects and improving my analytical and problem-solving skills.
+        Hi, I’m Bharath Ramanjaneyam. I’m a Data Science student passionate about Machine Learning, AI Agents,
+        and Decision Support Systems. I like building practical projects and learning by doing.
       </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <p><b>Core:</b> Python, Data Cleaning, Model Training, Evaluation</p>
+      <div class="pill-wrap">
+        <span class="pill">Python</span>
+        <span class="pill">Pandas</span>
+        <span class="pill">Scikit-learn</span>
+        <span class="pill">TF-IDF</span>
+        <span class="pill">Random Forest</span>
+        <span class="pill">Logistic Regression</span>
+        <span class="pill">NLP Basics</span>
+        <span class="pill">Google Colab</span>
+        <span class="pill">AI Agents</span>
+        <span class="pill">Prompt Engineering</span>
+      </div>
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
 
-    <div class="card">
-      <h3>Fake Job Posting Detection (Machine Learning)</h3>
-      <p>
-        Built a machine learning model to detect fake job postings using text preprocessing and classification techniques.
-        Used TF-IDF, Logistic Regression, Naive Bayes, and Random Forest.
-      </p>
-      <p><b>Tools:</b> Python, Pandas, Scikit-learn</p>
-      <p><a style="color:#00c2ff;" <p><a style="color:#00c2ff;" href="https://colab.research.google.com/drive/1JWdDbfYKvm8-azIf0MTmdoFmsZBbQT71?usp=drive_link" target="_blank">Colab Notebook Link Here</a></p>
+    <div class="grid">
+
+      <div class="card col-6">
+        <h3>DSS Assignment 3 — Fake Job Posting Detection (ML)</h3>
+        <p>
+          Built a model to detect fake job postings using text preprocessing and classification.
+          Compared Logistic Regression, Naive Bayes, Decision Tree, and Random Forest using TF-IDF features.
+        </p>
+        <p><b>Tools:</b> Python, Pandas, Scikit-learn, Google Colab</p>
+        <div class="links">
+          <a href="https://colab.research.google.com/drive/1JWdDbfYKvm8-azIf0MTmdoFmsZBbQT71?usp=drive_link" target="_blank">Open Colab Notebook</a>
+          <a href="https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction" target="_blank">Dataset (Kaggle)</a>
+          <a href="https://www.linkedin.com/posts/ramanjaneyam-bharath-b66228277_as-part-of-my-decision-support-systems-dss-share-7427044859020136448-pgT7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEN8pn4BJpbAwyXw5xDWrZGseDJoOgCMDu0" target="_blank">LinkedIn Post</a>
+        </div>
+      </div>
+
+      <div class="card col-6">
+        <h3>DSS Assignment 4 — AI Study Planner Agent (AI Agents)</h3>
+        <p>
+          Created an AI Study Planner that takes assignment details (deadline, difficulty, hours/day)
+          and outputs a priority list + daily study plan + motivation tips.
+        </p>
+        <p><b>Tools:</b> Poe AI Agent, Microsoft PowerPoint (Carousel)</p>
+        <div class="links">
+          <a href="https://poe.com/s/gyK4SpgK01gm8Y57J8Qv" target="_blank">Agent / Demo Link</a>
+          <a href="https://www.linkedin.com/posts/ramanjaneyam-bharath-b66228277_aiagents-dss-decisionsupportsystems-share-7427048354116845568-1rSD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEN8pn4BJpbAwyXw5xDWrZGseDJoOgCMDu0" target="_blank">LinkedIn Post</a>
+          <!-- If you upload your PDF to Google Drive, add it here later -->
+          <a href="#" target="_blank">Carousel PDF (Add Drive Link)</a>
+        </div>
+      </div>
 
     </div>
-
-    <div class="card">
-      <h3>AI Study Planner Agent (AI Agents / DSS)</h3>
-      <p>
-        Created an AI-based study planner assistant that helps prioritize assignments and generates a daily study plan.
-        Implemented using AI workflows and chatbot structure.
-      </p>
-      <p><b>Tools:</b> Flowise / Poe / AI Tools</p>
-      <p><a style="color:#00c2ff;" href="#">Carousel PDF & Workflow Link Here</a></p>
-    </div>
-
   </section>
 
   <section id="experience">
     <h2>Work Experience</h2>
-
     <div class="card">
       <h3>NoBroker – Sales Executive (Packers & Movers)</h3>
       <p>
-        Worked as a Sales Executive for NoBroker’s Packers and Movers service.
-        Handled customer queries, converted leads into bookings, negotiated pricing, and ensured smooth service delivery.
+        Worked as a Sales Executive for NoBroker’s Packers & Movers service. Handled customer queries,
+        converted leads into bookings, negotiated pricing, and ensured smooth service delivery.
       </p>
-      <p><b>Key Skills:</b> Sales, Customer Handling, Negotiation, CRM Tools</p>
+      <p><b>Key Skills:</b> Sales • Customer Handling • Negotiation • CRM Tools • Communication</p>
     </div>
-
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-
     <div class="card">
       <p><b>Email:</b> your-bharathramanjaneyam@gmail.com</p>
-      <p><b>LinkedIn:</b> <a style="color:#00c2ff;" href="#">Add LinkedIn Link Here</a></p>
-      <p><b>GitHub:</b> <a style="color:#00c2ff;" href="#">Add GitHub Link Here</a></p>
+      <p><b>LinkedIn Profile:</b>
+        <a style="color:var(--accent);" href="https://www.linkedin.com/in/ramanjaneyam-bharath-b66228277/" target="_blank">
+          Open LinkedIn
+        </a>
+      </p>
+      <p><b>Portfolio:</b>
+        <a style="color:var(--accent);" href="https://bharathnaidu4.github.io/" target="_blank">bharathnaidu4.github.io</a>
+      </p>
     </div>
   </section>
 
